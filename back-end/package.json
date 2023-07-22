@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Back-End of Tokopedia Play Project",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/msuryaditriputraR/Tokopedia-Play/blob/main/back-end"
@@ -14,5 +12,9 @@
     "back-end"
   ],
   "author": "@msuryaditriputraR",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "nodemon": "^3.0.1"
+  }
 }
