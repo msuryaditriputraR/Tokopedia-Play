@@ -1,0 +1,18 @@
+{
+  "name": "tokopedia-play-back-end",
+  "version": "1.0.0",
+  "description": "Back-End of Tokopedia Play Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msuryaditriputraR/Tokopedia-Play/blob/main/back-end"
+  },
+  "keywords": [
+    "back-end"
+  ],
+  "author": "@msuryaditriputraR",
+  "license": "ISC"
+}
