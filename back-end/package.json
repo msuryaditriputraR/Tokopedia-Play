@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Back-End of Tokopedia Play Project",
   "main": "app.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon ."
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/msuryaditriputraR/Tokopedia-Play/blob/main/back-end"
