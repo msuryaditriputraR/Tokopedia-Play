@@ -5,6 +5,11 @@ async function getAllVideo() {
   return videos;
 }
 
+async function addVideo(video) {
+  await Video.create(video);
+}
+
 export default {
-  getAllVideo
+  getAllVideo,
+  addVideo
 };

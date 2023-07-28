@@ -1,3 +1,4 @@
+import {randomUUID} from 'crypto';
 import videoRepository from '../repository/video.js';
 
 async function getVideoList() {
@@ -5,6 +6,20 @@ async function getVideoList() {
   return videos;
 }
 
+async function addVideo({urlThumbnail, titleVideo, linkVideo}) {
+  const id = randomUUID().toString();
+
+  await videoRepository.addVideo({
+    videoId: id,
+    urlThumbnail,
+    titleVideo,
+    linkVideo
+  });
+
+  return id;
+}
+
 export default {
-  getVideoList
+  getVideoList,
+  addVideo
 };
