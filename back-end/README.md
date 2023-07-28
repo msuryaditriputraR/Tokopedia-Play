@@ -5,6 +5,8 @@
 
 ## DATABASE STRUCTURE
 
+![Database Structure](./images/db.png)
+
 ## FOLDER STRUCTURE
 
 * .vscode contains recommendations for vscode extensions used in this project
