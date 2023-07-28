@@ -16,7 +16,11 @@ async function postVideo(req, res) {
     if (!urlThumbnail || !titleVideo || !linkVideo) {
       res.status(400).json({error: 'Bad Payload'});
     } else {
-      const id = await videoService.addVideo(req.body);
+      const id = await videoService.addVideo({
+        urlThumbnail,
+        titleVideo,
+        linkVideo
+      });
       res
         .status(201)
         .json({message: `video successfully created with id = ${id}`});
