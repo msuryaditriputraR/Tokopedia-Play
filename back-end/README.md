@@ -11,6 +11,7 @@
 * [collections](./collections/) contains sample collections mongoDB
 * [config](./config/) contains configuration mongoDB
 * [controllers](./controllers/) contains handler 
+* [images](./images/) contains images used in readme.md
 * [models](./models/) contains schema mongoose
 * [repository](./repository/) contains query moongose 
 * [rest](./rest/) contains sample response
@@ -205,6 +206,8 @@ use tokopedia-play
 npm start
 ```
 
-1. Open file on folder [rest](./rest/) and start send request
+4. Open file on folder [rest](./rest/) and start send request
+   
+![Sample Request](./images/sample-request.png)
 
-2. Happy Coding
+5. Happy Coding
