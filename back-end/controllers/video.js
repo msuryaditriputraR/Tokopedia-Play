@@ -11,10 +11,16 @@ async function getVideoList(req, res) {
 
 async function postVideo(req, res) {
   try {
-    const id = await videoService.addVideo(req.body);
-    res
-      .status(201)
-      .json({message: `video successfully created with id = ${id}`});
+    const {urlThumbnail, titleVideo, linkVideo} = req.body;
+
+    if (!urlThumbnail || !titleVideo || !linkVideo) {
+      res.status(400).json({message: 'Bad Payload'});
+    } else {
+      const id = await videoService.addVideo(req.body);
+      res
+        .status(201)
+        .json({message: `video successfully created with id = ${id}`});
+    }
   } catch (error) {
     res.status(500).json({error: 'Internal server error'});
   }

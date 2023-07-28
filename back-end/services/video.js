@@ -6,15 +6,11 @@ async function getVideoList() {
   return videos;
 }
 
-async function addVideo({urlThumbnail, titleVideo, linkVideo}) {
+async function addVideo(video) {
   const id = randomUUID().toString();
+  video.videoId = id;
 
-  await videoRepository.addVideo({
-    videoId: id,
-    urlThumbnail,
-    titleVideo,
-    linkVideo
-  });
+  await videoRepository.addVideo(video);
 
   return id;
 }
