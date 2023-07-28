@@ -5,6 +5,16 @@ async function getCommentList(videoId) {
   return comments;
 }
 
+async function addComment(comment) {
+  try {
+    const result = await Comment.create(comment);
+    return result;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
 export default {
-  getCommentList
+  getCommentList,
+  addComment
 };

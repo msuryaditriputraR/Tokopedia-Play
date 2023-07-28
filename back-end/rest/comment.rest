@@ -17,3 +17,16 @@ Content-Type: application/json
 {
   "videoId" : "51086f73-b2f1-4557-889a-3c02bb0386b8"
 }
+
+###
+
+# ADD COMMENT 
+
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+  "username" : "@msuryaditriputra",
+  "comment": "awesome",
+  "videoId" : "51086f73-b2f1-4557-889a-3c02bb0386b8"
+}
