@@ -4,7 +4,8 @@ const productSchema = new mongoose.Schema({
   productId: String,
   link: String,
   title: String,
-  price: Number
+  price: Number,
+  videoId: String
 });
 
 export default productSchema;
