@@ -5,7 +5,13 @@
 
 ## DATABASE STRUCTURE
 
+## FOLDER STRUCTURE
+
 ## API STRUCTURE
+There are 3 routes in this project
+* /videos
+* /products
+* /comments
 
 ## REQUEST & RESPONSE
 
