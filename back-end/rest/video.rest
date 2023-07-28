@@ -1,0 +1,15 @@
+# GET LIST OF VIDEOS
+
+GET http://localhost:3000/videos
+
+###
+
+# ADD VIDEO 
+POST http://localhost:3000/videos
+Content-Type: application/json
+
+{
+  "urlThumbnail": "test thumbnail 1",
+  "titleVideo": "test title 1",
+  "linkVideo" : "test link 1"
+}
