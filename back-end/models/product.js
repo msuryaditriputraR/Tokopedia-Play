@@ -8,4 +8,6 @@ const productSchema = new mongoose.Schema({
   videoId: String
 });
 
-export default productSchema;
+const Product = mongoose.model('Product', productSchema);
+
+export default Product;

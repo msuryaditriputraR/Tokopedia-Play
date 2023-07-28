@@ -7,4 +7,6 @@ const videoSchema = new mongoose.Schema({
   linkVideo: String
 });
 
-export default videoSchema;
+const Video = mongoose.model('Video', videoSchema);
+
+export default Video;
