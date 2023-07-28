@@ -7,6 +7,20 @@
 
 ## FOLDER STRUCTURE
 
+* .vscode contains recommendations for vscode extensions used in this project
+* [collections](./collections/) contains sample collections mongoDB
+* [config](./config/) contains configuration mongoDB
+* [controllers](./controllers/) contains handler 
+* [models](./models/) contains schema mongoose
+* [repository](./repository/) contains query moongose 
+* [rest](./rest/) contains sample response
+* [routes](./routes/) contains route in this project
+* [services](./services/) contains business logic
+* .env contains environment variable
+* .eslintrc.json contains config eslint
+* .prettierrc contains config prettier
+* app.js is main app
+
 ## API STRUCTURE
 There are 3 routes in this project
 * /videos
