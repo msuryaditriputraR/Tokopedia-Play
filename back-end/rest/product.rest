@@ -15,5 +15,19 @@ GET http://localhost:3000/products
 Content-Type: application/json
 
 {
-  "videoId" : "5f32bfb7-025b-4b6e-a2e3-d0782d0a13b1"
+  "videoId" : "51086f73-b2f1-4557-889a-3c02bb0386b8"
+}
+
+###
+
+# ADD PRODUCT
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "linkProduct" : "link product 2",
+  "titleProduct": "title product 2",
+  "priceProduct": 500000,
+  "videoId" : "51086f73-b2f1-4557-889a-3c02bb0386b8"
 }

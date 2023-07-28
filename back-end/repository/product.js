@@ -5,6 +5,11 @@ async function getProductList(videoId) {
   return products;
 }
 
+async function addProduct(product) {
+  await Product.create(product);
+}
+
 export default {
-  getProductList
+  getProductList,
+  addProduct
 };

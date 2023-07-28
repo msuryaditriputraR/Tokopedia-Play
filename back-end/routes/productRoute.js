@@ -3,7 +3,10 @@ const productRouter = express.Router();
 
 import productController from '../controllers/product.js';
 
-// GET Product LIST
+// GET PRODUCT LIST
 productRouter.get('/', productController.getProductList);
+
+// ADD PRODUCT
+productRouter.post('/', productController.postProduct);
 
 export default productRouter;
