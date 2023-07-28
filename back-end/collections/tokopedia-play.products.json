@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "64c335939da7e0f687d88eb2"
+  },
+  "productId": "7365e54d-17f3-4b56-8faf-f8dcd09bddb0",
+  "linkProduct": "link product 1",
+  "titleProduct": "title product 1",
+  "priceProduct": 200000,
+  "videoId": "51086f73-b2f1-4557-889a-3c02bb0386b8",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c335ab9da7e0f687d88eb5"
+  },
+  "productId": "c89876f3-19fc-44d6-9df4-e34d44859c8e",
+  "linkProduct": "link product 2",
+  "titleProduct": "title product 2",
+  "priceProduct": 500000,
+  "videoId": "51086f73-b2f1-4557-889a-3c02bb0386b8",
+  "__v": 0
+}]
