@@ -1,0 +1,19 @@
+# GET LIST OF COMMENTS with wrong Video id 
+
+GET http://localhost:3000/comments
+Content-Type: application/json
+
+{
+  "videoId" : "2"
+}
+
+###
+
+# GET LIST OF COMMENTS with right Video id 
+
+GET http://localhost:3000/comments
+Content-Type: application/json
+
+{
+  "videoId" : "51086f73-b2f1-4557-889a-3c02bb0386b8"
+}
