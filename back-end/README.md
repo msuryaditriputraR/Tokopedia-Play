@@ -179,9 +179,9 @@ Create a new comment and returns the id
 
 ### Requirements
 
-* Nodejs
-* Visual Studio Code
-* MongoDb
+* [Nodejs](https://nodejs.org/en) (v18.17 or newer)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [MongoDb](http://www.mongodb.com/) (v6.0.8 or newer)
 
 ### RUN
 1. Install all depedencies
