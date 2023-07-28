@@ -1,8 +1,10 @@
 import express from 'express';
 const router = express.Router();
 
-import videoRoute from './videoRoute.js';
+import videoRouter from './videoRoute.js';
+import productRouter from './productRoute.js';
 
-router.use('/videos', videoRoute);
+router.use('/videos', videoRouter);
+router.use('/products', productRouter);
 
 export default router;
