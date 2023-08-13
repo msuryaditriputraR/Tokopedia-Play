@@ -17,7 +17,10 @@ const Tabs = () => {
                 ? "bg-green-500 text-white"
                 : "bg-white text-current"
             }`}
-            onClick={() => setActiveTab(menu)}
+            onClick={() => {
+              localStorage.setItem("activeTab", menu);
+              setActiveTab(menu);
+            }}
           >
             {menu}
           </li>
