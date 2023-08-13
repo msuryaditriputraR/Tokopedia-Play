@@ -63,7 +63,7 @@ const Detail = () => {
   return (
     <>
       <Header />
-      <section className="mt-24 grid grid-cols-3 grid-rows-2 gap-5">
+      <section className="mt-24 grid grid-cols-3 gap-5">
         <Frame
           videoId={video.videoId}
           linkVideo={video.linkVideo}
