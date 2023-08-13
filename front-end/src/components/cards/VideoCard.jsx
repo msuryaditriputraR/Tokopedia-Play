@@ -12,7 +12,7 @@ const VideoCard = ({ video, index }) => {
           className="w-full rounded-md transition-all group-hover:brightness-50"
         />
         <button className="absolute bottom-[-100%] left-[50%] flex h-[55px] w-[55px] translate-x-[-50%] translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-green-500 transition-all group-hover:bottom-[50%]">
-          <FaPlay color="white" className="text-lg" />
+          <FaPlay color="white" className="text-lg" title="play" />
         </button>
       </div>
       <div className="px-2">
