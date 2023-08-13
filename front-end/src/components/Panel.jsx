@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { TabsContext } from "../context/TabsContext";
 import VideoCard from "./cards/videoCard";
 
 export const Panel = () => {
@@ -54,12 +56,16 @@ export const Panel = () => {
     },
   ];
 
+  const { activeTab } = useContext(TabsContext);
+
   return (
     <section className="mt-5">
       <div className="grid grid-cols-3 items-start gap-6">
-        {data.map((d, i) => (
-          <VideoCard key={i} video={d} index={i} />
-        ))}
+        {activeTab === "Explore"
+          ? data.map((d, i) => <VideoCard key={i} video={d} index={i} />)
+          : data
+              .filter((d) => d.category.includes(activeTab))
+              .map((d, i) => <VideoCard key={i} video={d} index={i} />)}
       </div>
     </section>
   );
