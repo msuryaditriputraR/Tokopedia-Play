@@ -15,7 +15,7 @@ const Search = () => {
       <input
         type="text"
         placeholder="Search Video"
-        className="w-full bg-transparent outline-none"
+        className="w-full bg-transparent caret-green-500 outline-none"
         value={keyword}
         onChange={handleSearch}
       />

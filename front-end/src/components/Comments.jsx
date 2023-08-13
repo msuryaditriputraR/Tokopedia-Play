@@ -10,7 +10,7 @@ const Comments = () => {
       <form className="absolute bottom-4 left-[50%] flex w-11/12 translate-x-[-50%] items-center gap-x-3 rounded-full border border-slate-200 px-4 py-2 shadow">
         <input
           type="text"
-          className="flex-1 bg-transparent py-1 text-sm outline-none"
+          className="flex-1 bg-transparent py-1 text-sm caret-green-500 outline-none"
           placeholder="Give your Positive Comment"
         />
         <Button cls="rounded-full p-2">
