@@ -9,3 +9,23 @@ body {
 section {
   @apply px-14
 }
+
+.carousel {
+  @apply overflow-x-auto py-4 items-start gap-x-3 grid grid-flow-col auto-cols-max
+}
+
+@layer utilities {
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
