@@ -7,7 +7,7 @@ const Comments = () => {
     {
       username: "danbo",
       text: "test",
-      time: Date.now(),
+      time: new Date("08/12/2023"),
     },
     {
       username: "dandi",
