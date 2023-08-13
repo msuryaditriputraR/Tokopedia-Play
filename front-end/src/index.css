@@ -5,3 +5,7 @@
 body {
   @apply font-poppins
 }
+
+section {
+  @apply px-14
+}

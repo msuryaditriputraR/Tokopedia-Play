@@ -1,7 +1,7 @@
 const Tabs = () => {
   const tabsMenu = ["Explore", "Fashion", "Elektronik", "Health & Care"];
   return (
-    <section className="mt-20 px-14">
+    <section className="mt-20">
       <ul className="flex gap-x-2">
         {tabsMenu.map((menu, index) => (
           <li
