@@ -273,7 +273,7 @@ const Products = ({ videoId }) => {
   }, [videoId]);
 
   return (
-    <div className="carousel no-scrollbar col-span-2 col-start-1 px-2">
+    <div className="carousel no-scrollbar col-span-3 px-2">
       {products.map((product, index) => (
         <ProductCard key={index} product={product} />
       ))}
