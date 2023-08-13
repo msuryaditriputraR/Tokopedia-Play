@@ -1,10 +1,10 @@
-const Button = ({ text, handleClick }) => {
+const Button = ({ children, handleClick, cls }) => {
   return (
     <button
-      className="font-poppins rounded-md bg-green-500 px-4 py-2 font-semibold uppercase tracking-wide text-white shadow-md"
+      className={`bg-green-500 font-poppins font-semibold uppercase tracking-wide text-white shadow-md ${cls}`}
       onClick={handleClick}
     >
-      {text}
+      {children}
     </button>
   );
 };
