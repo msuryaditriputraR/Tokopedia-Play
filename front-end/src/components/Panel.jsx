@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { TabsContext } from "../context/TabsContext";
-import VideoCard from "./cards/videoCard";
+import VideoCard from "./cards/VideoCard";
 import useFetch from "../hooks/useFetch";
 
 export const Panel = () => {
