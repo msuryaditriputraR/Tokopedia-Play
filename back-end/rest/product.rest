@@ -6,18 +6,18 @@ GET http://localhost:5000/api/v1/video/2/products
 
 # GET LIST OF PRODUCTS with right Video id 
 
-GET http://localhost:5000/api/v1/video/64da3ac9f1c47b82eae50b0f/products
+GET http://localhost:5000/api/v1/video/64da4a6895f8e95cc824e1ca/products
 
 ###
 
 # ADD PRODUCT
 
-POST http://localhost:5000/api/v1/video/64da3ac9f1c47b82eae50b0f/products
+POST http://localhost:5000/api/v1/video/64da4a6895f8e95cc824e1ca/products
 Content-Type: application/json
 
-{
-        "linkProduct": "https://www.tokopedia.com/pasarponselsby/oppo-a58-nfc-6-128-garansi-resmi-termurah-black-048d3?extParam=ivf%3Dfalse?extParam=whid%3D2119084",
-        "title": "OPPO A58 NFC 6/128",
-        "price": 2499000,
-        "imageURL": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/8/10/5585417d-61c4-4236-9eed-48fea8185e90.jpg"
-}
+ {
+        "linkProduct": "https://www.tokopedia.com/unilever/axe-parfum-saku-dark-temptation-15ml",
+        "title": "Axe Parfum Saku",
+        "price": 14600,
+        "imageURL": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/8/10/1089d8b4-ddac-4f51-8fe6-621ef4c345a8.png.webp?ect=4g"
+      }
