@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "nodemon .",
-    "lint": "eslint --fix --ext .js ."
+    "lint": "eslint --fix --ext .js .",
+    "prisma:push": "npx prisma db push",
+    "prisma:generate": "npx prisma generate"
   },
   "repository": {
     "type": "git",
