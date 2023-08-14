@@ -1,17 +1,13 @@
-import Comment from '../models/comment.js';
+import {prisma} from '../config/prismaConfig.js';
 
 async function getCommentList(videoId) {
-  const comments = await Comment.find({videoId}).exec();
+  const comments = await prisma.comments.findMany({where: {videoId}});
   return comments;
 }
 
-async function addComment(comment) {
-  try {
-    const result = await Comment.create(comment);
-    return result;
-  } catch (error) {
-    console.log(error.message);
-  }
+async function addComment(data) {
+  const comment = await prisma.comments.create({data});
+  return comment;
 }
 
 export default {

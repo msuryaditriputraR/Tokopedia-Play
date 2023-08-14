@@ -1,32 +1,22 @@
 # GET LIST OF COMMENTS with wrong Video id 
 
-GET http://localhost:3000/comments
-Content-Type: application/json
+GET http://localhost:5000/api/v1/video/2/comments
 
-{
-  "videoId" : "2"
-}
 
 ###
 
 # GET LIST OF COMMENTS with right Video id 
 
-GET http://localhost:3000/comments
-Content-Type: application/json
-
-{
-  "videoId" : "51086f73-b2f1-4557-889a-3c02bb0386b8"
-}
+GET http://localhost:5000/api/v1/video/64da3ac9f1c47b82eae50b0f/comments
 
 ###
 
 # ADD COMMENT 
 
-POST http://localhost:3000/comments
+POST http://localhost:5000/api/v1/video/64da3ac9f1c47b82eae50b0f/comments
 Content-Type: application/json
 
 {
-  "username" : "@msuryaditriputra",
-  "comment": "awesome",
-  "videoId" : "51086f73-b2f1-4557-889a-3c02bb0386b8"
+  "username" : "dandi",
+  "message": "awesome"
 }
