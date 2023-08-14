@@ -5,7 +5,7 @@ async function getVideoList(req, res) {
     const videos = await videoService.getVideoList();
     res.status(200).json(videos);
   } catch (error) {
-    res.status(500).json({error: 'Internal server error'});
+    res.status(500).json({error: error.message});
   }
 }
 
