@@ -6,7 +6,10 @@ async function getAllVideo() {
 }
 
 async function getVideo(videoId) {
-  const video = await prisma.videos.findUnique({where: {id: videoId}});
+  const video = await prisma.videos.update({
+    where: {id: videoId},
+    data: {views: {increment: 1}}
+  });
   return video;
 }
 
