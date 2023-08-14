@@ -1,12 +1,14 @@
 import express from 'express';
 const router = express.Router();
 
-import videoRouter from './videoRoute.js';
-import productRouter from './productRoute.js';
-import commentRouter from './commentRoute.js';
+import videoController from '../controllers/video.js';
+// import productController from '../controllers/product.js';
+// import commentController from '../controllers/comment.js';
 
-router.use('/videos', videoRouter);
-router.use('/products', productRouter);
-router.use('/comments', commentRouter);
+router.get('/videos', videoController.getVideoList);
+router.post('/videos', videoController.postVideo);
+// router.get('/video/:videoId/products', productController.getProductList);
+// router.post('/video/:videoId/products', productController.postProduct);
+// router.use('/comments', commentRouter);
 
 export default router;

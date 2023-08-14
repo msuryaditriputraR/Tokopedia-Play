@@ -1,11 +1,11 @@
 # GET LIST OF VIDEOS
 
-GET http://localhost:5000/videos
+GET http://localhost:5000/api/v1/videos
 
 ###
 
 # ADD VIDEO WITH BAD PAYLOAD
-POST http://localhost:5000/videos
+POST http://localhost:5000/api/v1/videos
 Content-Type: application/json
 
 {
@@ -18,15 +18,15 @@ Content-Type: application/json
 ###
 
 #ADD VIDEO
-POST http://localhost:5000/videos
+POST http://localhost:5000/api/v1/videos
 Content-Type: application/json
 
 {
     "name": "Pasar Ponsel Surabaya",
     "title": "Oppo Reno 5",
     "videoId": "_DHtREjG0Kc",
-    "linkVideo": "https://www.youtube.com/embed/_DHtREjG0Kc",
-    "thumbnailURL": "https://i.ytimg.com/vi/_DHtREjG0Kc/hqdefault.jpg",
+    "linkVideo": "https://www.youtube-nocookie.com/embed/_DHtREjG0Kc",
+    "thumbnailURL": "https://i.ytimg.com/vi/_DHtREjG0Kc/mqdefault.jpg",
     "category": [
       "Elektronik"
     ]
