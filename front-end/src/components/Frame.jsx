@@ -1,4 +1,6 @@
-const Frame = ({ title, linkVideo, videoId }) => {
+const Frame = ({ title, linkVideo }) => {
+  const videoId = linkVideo.split("/")[4];
+
   return (
     <div className="relative col-span-2 h-0 pb-[56.25%]">
       <iframe
