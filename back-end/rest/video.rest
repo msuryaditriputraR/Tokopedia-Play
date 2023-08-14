@@ -1,26 +1,33 @@
 # GET LIST OF VIDEOS
 
-GET http://localhost:3000/videos
+GET http://localhost:5000/videos
 
 ###
 
 # ADD VIDEO WITH BAD PAYLOAD
-POST http://localhost:3000/videos
+POST http://localhost:5000/videos
 Content-Type: application/json
 
 {
-  "urlThumbnail": "test thumbnail",
-  "titleVideo": "test title"
+  "name": "Pasar Ponsel Surabaya",
+  "title": "Oppo Reno 5",
+  "videoId": "_DHtREjG0Kc",
+  "linkVideo": "https://www.youtube.com/embed/_DHtREjG0Kc"
 }
 
 ###
 
 #ADD VIDEO
-POST http://localhost:3000/videos
+POST http://localhost:5000/videos
 Content-Type: application/json
 
 {
-  "urlThumbnail": "test thumbnail 2",
-  "titleVideo": "test title 2",
-  "linkVideo": "test link 2"
+    "name": "Pasar Ponsel Surabaya",
+    "title": "Oppo Reno 5",
+    "videoId": "_DHtREjG0Kc",
+    "linkVideo": "https://www.youtube.com/embed/_DHtREjG0Kc",
+    "thumbnailURL": "https://i.ytimg.com/vi/_DHtREjG0Kc/hqdefault.jpg",
+    "category": [
+      "Elektronik"
+    ]
 }

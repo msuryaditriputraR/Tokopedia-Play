@@ -11,22 +11,22 @@ async function getVideoList(req, res) {
 
 async function postVideo(req, res) {
   try {
-    const {urlThumbnail, titleVideo, linkVideo} = req.body;
+    const {name, title, linkVideo, thumbnailURL, category} = req.body;
 
-    if (!urlThumbnail || !titleVideo || !linkVideo) {
+    if (!name || !title || !linkVideo || !thumbnailURL || !category) {
       res.status(400).json({error: 'Bad Payload'});
     } else {
-      const id = await videoService.addVideo({
-        urlThumbnail,
-        titleVideo,
-        linkVideo
+      const video = await videoService.addVideo({
+        name,
+        title,
+        linkVideo,
+        thumbnailURL,
+        category
       });
-      res
-        .status(201)
-        .json({message: `video successfully created with id = ${id}`});
+      res.status(201).json({message: `video successfully created`, video});
     }
   } catch (error) {
-    res.status(500).json({error: 'Internal server error'});
+    res.status(500).json({error: error.message});
   }
 }
 

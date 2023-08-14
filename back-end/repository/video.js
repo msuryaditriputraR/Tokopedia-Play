@@ -1,12 +1,18 @@
-import Video from '../models/video.js';
+import {prisma} from '../config/prismaConfig.js';
 
 async function getAllVideo() {
-  const videos = await Video.find();
+  const videos = await prisma.videos.findMany();
   return videos;
 }
 
-async function addVideo(video) {
-  await Video.create(video);
+async function addVideo(data) {
+  try {
+    const video = await prisma.videos.create({data});
+
+    return video;
+  } catch (error) {
+    throw new Error(error.message);
+  }
 }
 
 export default {
