@@ -5,6 +5,11 @@ async function getAllVideo() {
   return videos;
 }
 
+async function getVideo(videoId) {
+  const video = await prisma.videos.findUnique({where: {id: videoId}});
+  return video;
+}
+
 async function addVideo(data) {
   const video = await prisma.videos.create({data});
   return video;
@@ -12,5 +17,6 @@ async function addVideo(data) {
 
 export default {
   getAllVideo,
+  getVideo,
   addVideo
 };

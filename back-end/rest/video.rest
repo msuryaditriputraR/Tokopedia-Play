@@ -4,6 +4,12 @@ GET http://localhost:5000/api/v1/videos
 
 ###
 
+# GET VIDEO BY ID
+
+GET http://localhost:5000/api/v1/video/64da4a6895f8e95cc824e1ca
+
+###
+
 # ADD VIDEO WITH BAD PAYLOAD
 POST http://localhost:5000/api/v1/videos
 Content-Type: application/json

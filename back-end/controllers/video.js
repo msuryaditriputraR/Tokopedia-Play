@@ -9,6 +9,16 @@ async function getVideoList(req, res) {
   }
 }
 
+async function getVideo(req, res) {
+  try {
+    const {videoId} = req.params;
+    const video = await videoService.getVideoById(videoId);
+    res.status(200).json(video);
+  } catch (error) {
+    res.status(500).json({error: error.message});
+  }
+}
+
 async function postVideo(req, res) {
   try {
     const {name, title, linkVideo, thumbnailURL, category} = req.body;
@@ -32,5 +42,6 @@ async function postVideo(req, res) {
 
 export default {
   getVideoList,
-  postVideo
+  postVideo,
+  getVideo
 };

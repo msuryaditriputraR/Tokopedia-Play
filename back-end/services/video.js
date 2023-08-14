@@ -5,6 +5,11 @@ async function getVideoList() {
   return videos;
 }
 
+async function getVideoById(videoId) {
+  const video = await videoRepository.getVideo(videoId);
+  return video;
+}
+
 async function addVideo(data) {
   const video = await videoRepository.addVideo(data);
 
@@ -13,5 +18,6 @@ async function addVideo(data) {
 
 export default {
   getVideoList,
+  getVideoById,
   addVideo
 };

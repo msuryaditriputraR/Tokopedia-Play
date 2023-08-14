@@ -7,6 +7,7 @@ import commentController from '../controllers/comment.js';
 
 // VIDEOS
 router.get('/videos', videoController.getVideoList);
+router.get('/video/:videoId', videoController.getVideo);
 router.post('/videos', videoController.postVideo);
 
 // PRODUCTS
