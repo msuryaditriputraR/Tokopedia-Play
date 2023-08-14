@@ -2,11 +2,15 @@ import { FaPlay } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const VideoCard = ({ video, index }) => {
-  const { name, title, thumbnailURL, videoId } = video;
+  const viewsFormat = new Intl.NumberFormat("en", {
+    notation: "compact",
+    compactDisplay: "short",
+  });
+  const { name, title, thumbnailURL, id, views } = video;
 
   return (
     <article className="group rounded-xl border border-slate-200 bg-white p-3 shadow-sm hover:shadow-md">
-      <Link to={`/video/${videoId}`}>
+      <Link to={`/video/${id}`}>
         <div className="relative mb-4 overflow-hidden">
           <img
             src={thumbnailURL}
@@ -18,7 +22,9 @@ const VideoCard = ({ video, index }) => {
           </button>
         </div>
         <div className="px-2">
-          <span className="text-sm text-slate-500">10K views</span>
+          <span className="text-sm text-slate-500">
+            {viewsFormat.format(views)} views
+          </span>
           <h3 className="line-clamp-2 font-semibold">{title}</h3>
           <div className="mt-2 flex items-center gap-x-2 text-sm font-bold text-green-500">
             <img
