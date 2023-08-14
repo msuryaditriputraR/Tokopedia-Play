@@ -24,7 +24,6 @@ Content-Type: application/json
 {
     "name": "Pasar Ponsel Surabaya",
     "title": "Oppo Reno 5",
-    "videoId": "_DHtREjG0Kc",
     "linkVideo": "https://www.youtube-nocookie.com/embed/_DHtREjG0Kc",
     "thumbnailURL": "https://i.ytimg.com/vi/_DHtREjG0Kc/mqdefault.jpg",
     "category": [
