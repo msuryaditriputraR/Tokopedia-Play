@@ -2,42 +2,37 @@ import productService from '../services/product.js';
 
 async function getProductList(req, res) {
   try {
-    const {videoId} = req.body;
+    const {videoId} = req.params;
     if (!videoId) res.status(400).json({error: 'Bad Payload'});
     else {
       const products = await productService.getProductList(videoId);
-
-      if (products.length <= 0) {
-        res.status(404).json({error: 'videoId not found'});
-      } else {
-        res.status(200).json(products);
-      }
+      res.status(200).json(products);
     }
   } catch (error) {
-    res.status(500).json({error: 'Internal server error'});
+    res.status(500).json({error: error.message});
   }
 }
 
 async function postProduct(req, res) {
   try {
-    const {linkProduct, titleProduct, priceProduct, videoId} = req.body;
+    const {linkProduct, title, price, imageURL} = req.body;
+    const {videoId} = req.params;
 
-    if (!linkProduct || !titleProduct || !priceProduct || !videoId) {
+    if (!linkProduct || !title || !price || !imageURL || !videoId) {
       res.status(400).json({error: 'Bad Payload'});
     } else {
-      const id = await productService.addProduct({
+      const product = await productService.addProduct({
         linkProduct,
-        titleProduct,
-        priceProduct,
+        title,
+        price,
+        imageURL,
         videoId
       });
 
-      res
-        .status(201)
-        .json({message: `product successfully created with id = ${id}`});
+      res.status(201).json({message: `product successfully created`, product});
     }
   } catch (error) {
-    res.status(500).json({error: 'Internal server error'});
+    res.status(500).json({error: error.message});
   }
 }
 

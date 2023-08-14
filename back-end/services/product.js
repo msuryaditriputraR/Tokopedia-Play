@@ -1,4 +1,3 @@
-import {randomUUID} from 'crypto';
 import productRepository from '../repository/product.js';
 
 async function getProductList(videoId) {
@@ -6,13 +5,9 @@ async function getProductList(videoId) {
   return products;
 }
 
-async function addProduct(product) {
-  const id = randomUUID().toString();
-  product.productId = id;
-
-  await productRepository.addProduct(product);
-
-  return id;
+async function addProduct(data) {
+  const product = await productRepository.addProduct(data);
+  return product;
 }
 
 export default {

@@ -1,12 +1,13 @@
-import Product from '../models/product.js';
+import {prisma} from '../config/prismaConfig.js';
 
 async function getProductList(videoId) {
-  const products = await Product.find({videoId}).exec();
+  const products = await prisma.products.findMany({where: {videoId}});
   return products;
 }
 
-async function addProduct(product) {
-  await Product.create(product);
+async function addProduct(data) {
+  const product = await prisma.products.create({data});
+  return product;
 }
 
 export default {
