@@ -6,13 +6,8 @@ async function getAllVideo() {
 }
 
 async function addVideo(data) {
-  try {
-    const video = await prisma.videos.create({data});
-
-    return video;
-  } catch (error) {
-    throw new Error(error.message);
-  }
+  const video = await prisma.videos.create({data});
+  return video;
 }
 
 export default {
