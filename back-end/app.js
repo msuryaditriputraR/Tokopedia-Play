@@ -8,7 +8,7 @@ const app = express();
 
 // MIDDLEWARE
 app.use(express.json());
-app.use(router);
+app.use('/api/v1/', router);
 
 // START SERVER
 app.listen(port, () => {
