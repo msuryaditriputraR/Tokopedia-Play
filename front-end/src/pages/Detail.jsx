@@ -6,10 +6,17 @@ import Frame from "../components/Frame";
 import Comments from "../components/Comments";
 import Products from "../components/Products";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const Detail = () => {
   const { videoId } = useParams();
   const [video] = useFetch(import.meta.env.VITE_ROOT_API + `video/${videoId}`);
+
+  useEffect(() => {
+    if (video) {
+      document.title = video.title;
+    }
+  }, [video]);
 
   return (
     video && (
