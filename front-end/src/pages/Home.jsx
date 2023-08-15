@@ -10,6 +10,7 @@ const Home = () => {
   const { setIsDetailPage } = useContext(PageContext);
 
   useEffect(() => {
+    document.title = "Tokopedia Play";
     setIsDetailPage(false);
   }, [setIsDetailPage]);
 
