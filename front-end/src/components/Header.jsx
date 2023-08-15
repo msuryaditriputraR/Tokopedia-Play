@@ -1,12 +1,17 @@
 import { useContext } from "react";
-import Button from "./Button";
 import Search from "./Search";
 import { PageContext } from "../context/PageContext";
 import { Link } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
+import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
+import Profile from "./Profile";
+import { UserContext } from "../context/UserContext";
 
 const Header = () => {
   const { isDetailPage } = useContext(PageContext);
+  const { user, setUser } = useContext(UserContext);
+
   return (
     <header className="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-between rounded-b-2xl bg-green-200 bg-opacity-5 bg-clip-padding px-14 shadow backdrop-blur-xl backdrop-filter">
       <div className="flex items-center gap-x-4">
@@ -20,9 +25,24 @@ const Header = () => {
         )}
       </div>
       {!isDetailPage && <Search />}
-      <Button handleClick={() => {}} cls="px-4 py-2 rounded-md">
-        Sign In
-      </Button>
+
+      <GoogleOAuthProvider clientId={import.meta.env.VITE_GCLIENT_ID}>
+        {Object.keys(user).length > 0 ? (
+          <Profile />
+        ) : (
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              const u = jwt_decode(credentialResponse.credential);
+              setUser(u);
+              localStorage.setItem("user", JSON.stringify(u));
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+            useOneTap
+          />
+        )}
+      </GoogleOAuthProvider>
     </header>
   );
 };

@@ -1,4 +1,5 @@
 import { PageProvider } from "./context/PageContext";
+import { UserProvider } from "./context/UserContext";
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -17,9 +18,11 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <PageProvider>
-        <RouterProvider router={router} />
-      </PageProvider>
+      <UserProvider>
+        <PageProvider>
+          <RouterProvider router={router} />
+        </PageProvider>
+      </UserProvider>
     </>
   );
 }
