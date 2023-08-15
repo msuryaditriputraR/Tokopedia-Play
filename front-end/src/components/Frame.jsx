@@ -1,11 +1,9 @@
-const Frame = ({ title, linkVideo }) => {
-  const videoId = linkVideo.split("/")[4];
-
+const Frame = ({ title, linkVideo, youtubeId }) => {
   return (
     <div className="relative col-span-2 h-0 pb-[56.25%]">
       <iframe
         className="absolute left-0 top-0 h-full w-full rounded-2xl shadow-md"
-        src={`${linkVideo}?controls=0&autoplay=1&loop=1&rel=0&playlist=${videoId}`}
+        src={`${linkVideo}?controls=0&autoplay=1&loop=1&rel=0&playlist=${youtubeId}`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>

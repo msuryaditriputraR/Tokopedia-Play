@@ -16,7 +16,11 @@ const Detail = () => {
       <>
         <Header />
         <section className="mt-24 grid grid-cols-3 gap-5">
-          <Frame linkVideo={video.linkVideo} title={video.title} />
+          <Frame
+            linkVideo={video.linkVideo}
+            title={video.title}
+            youtubeId={video.youtubeId}
+          />
           <Comments videoId={video.id} />
           <Products videoId={video.id} />
         </section>
