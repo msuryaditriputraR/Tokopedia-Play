@@ -1,3 +1,4 @@
+import { PageProvider } from "./context/PageContext";
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -16,7 +17,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <PageProvider>
+        <RouterProvider router={router} />
+      </PageProvider>
     </>
   );
 }
