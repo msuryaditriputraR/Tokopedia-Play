@@ -13,10 +13,10 @@ export const Panel = () => {
       <section className="mt-5">
         <div className="grid grid-cols-3 items-start gap-6">
           {activeTab === "Explore"
-            ? data.map((d, i) => <VideoCard key={i} video={d} index={i} />)
+            ? data.map((d, i) => <VideoCard key={d.id} video={d} index={i} />)
             : data
                 .filter((d) => d.category.includes(activeTab))
-                .map((d, i) => <VideoCard key={i} video={d} index={i} />)}
+                .map((d, i) => <VideoCard key={d.id} video={d} index={i} />)}
         </div>
       </section>
     )

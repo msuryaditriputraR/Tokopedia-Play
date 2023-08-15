@@ -15,8 +15,8 @@ const Comments = ({ videoId }) => {
           Comments
         </h2>
         <div className="no-scrollbar flex max-h-full flex-col gap-y-2 overflow-y-auto">
-          {data.map((d, i) => (
-            <CommentCard key={i} comment={d} />
+          {data.map((d) => (
+            <CommentCard key={d.id} comment={d} />
           ))}
         </div>
         <form className="absolute bottom-4 left-[50%] z-10 flex w-11/12 translate-x-[-50%] items-center gap-x-3 rounded-full border border-slate-200 bg-white px-4 py-2 shadow">

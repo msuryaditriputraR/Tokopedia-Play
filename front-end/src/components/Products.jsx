@@ -9,8 +9,8 @@ const Products = ({ videoId }) => {
   return (
     products && (
       <div className="carousel no-scrollbar col-span-3 px-2">
-        {products.map((product, index) => (
-          <ProductCard key={index} product={product} />
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     )
