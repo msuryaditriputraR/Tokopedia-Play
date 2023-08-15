@@ -1,10 +1,84 @@
 [{
   "_id": {
-    "$oid": "64c334731ae7cc21cc456cbc"
+    "$oid": "64da4a6895f8e95cc824e1c6"
   },
-  "videoId": "51086f73-b2f1-4557-889a-3c02bb0386b8",
-  "urlThumbnail": "test thumbnail 2",
-  "titleVideo": "test title 2",
-  "linkVideo": "test link 2",
-  "__v": 0
+  "name": "Pasar Ponsel Surabaya",
+  "title": "Oppo Reno 5",
+  "linkVideo": "https://www.youtube-nocookie.com/embed/_DHtREjG0Kc",
+  "thumbnailURL": "https://i.ytimg.com/vi/_DHtREjG0Kc/mqdefault.jpg",
+  "youtubeId": "_DHtREjG0Kc",
+  "category": [
+    "Elektronik"
+  ],
+  "views": 21
+},
+{
+  "_id": {
+    "$oid": "64da4a6895f8e95cc824e1c7"
+  },
+  "name": "JV Hasanah",
+  "title": "Gamis Lebaran nyaman seharian",
+  "linkVideo": "https://www.youtube-nocookie.com/embed/el3vuFVkZuk",
+  "thumbnailURL": "https://i.ytimg.com/vi/el3vuFVkZuk/mqdefault.jpg",
+  "youtubeId": "el3vuFVkZuk",
+  "category": [
+    "Fashion"
+  ],
+  "views": 12
+},
+{
+  "_id": {
+    "$oid": "64da4a6895f8e95cc824e1c8"
+  },
+  "name": "Libby Baby",
+  "title": "REVIEW BAJU ANAK LIBBY BABY",
+  "linkVideo": "https://www.youtube-nocookie.com/embed/CW7AOyBk3Po",
+  "thumbnailURL": "https://i.ytimg.com/vi/CW7AOyBk3Po/mqdefault.jpg",
+  "youtubeId": "CW7AOyBk3Po",
+  "category": [
+    "Fashion"
+  ],
+  "views": 10
+},
+{
+  "_id": {
+    "$oid": "64da4a6895f8e95cc824e1c9"
+  },
+  "name": "Okechuku",
+  "title": "Review Produk Okechuku Official With paulinekharismaCTK",
+  "linkVideo": "https://www.youtube-nocookie.com/embed/b7GeMc-RvGg",
+  "thumbnailURL": "https://i.ytimg.com/vi/b7GeMc-RvGg/mq2.jpg",
+  "youtubeId": "b7GeMc-RvGg",
+  "category": [
+    "Fashion"
+  ],
+  "views": 14
+},
+{
+  "_id": {
+    "$oid": "64da4a6895f8e95cc824e1ca"
+  },
+  "name": "Unilever",
+  "title": "Setiap U Berikan Kebaikan",
+  "linkVideo": "https://www.youtube-nocookie.com/embed/wn90Ot2YA78",
+  "thumbnailURL": "https://i.ytimg.com/vi/wn90Ot2YA78/maxresdefault.jpg",
+  "youtubeId": "wn90Ot2YA78",
+  "category": [
+    "Health & Care"
+  ],
+  "views": 19
+},
+{
+  "_id": {
+    "$oid": "64da4a6895f8e95cc824e1cb"
+  },
+  "name": "Galaxy Camera",
+  "title": "Canon EOS R10 Review Indonesia | Hasil Foto Video & Spesifikasi Lengkap",
+  "linkVideo": "https://www.youtube-nocookie.com/embed/DLKjeBlykVY",
+  "thumbnailURL": "https://i.ytimg.com/vi/DLKjeBlykVY/maxresdefault.jpg",
+  "youtubeId": "DLKjeBlykVY",
+  "category": [
+    "Elektronik"
+  ],
+  "views": 23
 }]
