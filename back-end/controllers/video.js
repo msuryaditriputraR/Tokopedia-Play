@@ -21,9 +21,17 @@ async function getVideo(req, res) {
 
 async function postVideo(req, res) {
   try {
-    const {name, title, linkVideo, thumbnailURL, category} = req.body;
+    const {name, title, linkVideo, thumbnailURL, category, youtubeId} =
+      req.body;
 
-    if (!name || !title || !linkVideo || !thumbnailURL || !category) {
+    if (
+      !name ||
+      !title ||
+      !linkVideo ||
+      !thumbnailURL ||
+      !category ||
+      !youtubeId
+    ) {
       res.status(400).json({error: 'Bad Payload'});
     } else {
       const video = await videoService.addVideo({
@@ -31,7 +39,8 @@ async function postVideo(req, res) {
         title,
         linkVideo,
         thumbnailURL,
-        category
+        category,
+        youtubeId
       });
       res.status(201).json({message: `video successfully created`, video});
     }

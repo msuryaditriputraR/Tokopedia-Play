@@ -32,6 +32,7 @@ Content-Type: application/json
     "title": "Oppo Reno 5",
     "linkVideo": "https://www.youtube-nocookie.com/embed/_DHtREjG0Kc",
     "thumbnailURL": "https://i.ytimg.com/vi/_DHtREjG0Kc/mqdefault.jpg",
+    "youtubeId": "_DHtREjG0Kc",
     "category": [
       "Elektronik"
     ]

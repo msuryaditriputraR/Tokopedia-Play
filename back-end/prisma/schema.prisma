@@ -13,6 +13,7 @@ model Videos {
   title        String
   linkVideo    String
   thumbnailURL String
+  youtubeId    String
   category     String[]
   views        Int        @default(0)
   products     Products[]
