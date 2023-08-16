@@ -44,7 +44,7 @@ const Comments = ({ videoId }) => {
       <h2 className="absolute top-0 z-10 w-full border border-slate-200 bg-white px-4 py-3 font-semibold">
         Comments
       </h2>
-      <div className="no-scrollbar flex max-h-full flex-col gap-y-2 overflow-y-auto">
+      <div className="no-scrollbar flex max-h-[80%] flex-col gap-y-2 overflow-y-auto">
         {listComments.map((d) => (
           <CommentCard key={d.id} comment={d} />
         ))}
