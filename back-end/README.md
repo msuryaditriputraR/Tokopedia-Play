@@ -40,13 +40,26 @@ Return all videos
 * Content:
 
 ```
-
+[
+  "_id": {
+    "$oid": String
+  },
+  "name": String,
+  "title": String,
+  "linkVideo": String,
+  "thumbnailURL": String,
+  "youtubeId": String,
+  "category": [
+    String
+  ],
+  "views": Number
+]
 
 ```
 
-### POST /videos 
+### POST /api/v1/videos 
 
-Create a new video and returns the id
+Create a new video and returns the video
 
 * Code : 201
 * Headers: 
@@ -57,23 +70,24 @@ Create a new video and returns the id
 
 ```
 {
-  "urlThumbnail": String,
-  "titleVideo": String,
-  "linkVideo": String
+ "name": String,
+  "title": String,
+  "linkVideo": String,
+  "thumbnailURL": String,
+  "youtubeId": String,
+  "category": [
+    String
+  ]
 }
 
 ```
 
-### GET /products
+### GET /api/vi/video/{videoId}/products
 
 Return all products with videoId
 
 * Code : 200
-* Headers: 
-```
-  Content-Type: application/json
-```
-* Payload :
+* Query :
 ```
 {
   "videoId" : String
@@ -83,49 +97,64 @@ Return all products with videoId
 
 ```
 [
-  {
-    "_id": String,
-    "productId": String,
-    "linkProduct": String,
-    "titleProduct": String,
-    "priceProduct": Number,
-    "videoId" : String,
-    "__v": Number
+  "_id": {
+    "$oid": String
+  },
+  "linkProduct": String,
+  "title": String,
+  "price": Number,
+  "imageURL": String,
+  "videoId": {
+    "$oid": String
+  },
+  "createdAt": {
+    "$date": Date
+  },
+  "updatedAt": {
+    "$date": Date
   }
 ]
 
 ```
 
-### POST /products 
+### POST /api/vi/video/{videoId}/products
 
-Create a new product and returns the id
+Create a new product and returns the product
 
 * Code : 201
 * Headers: 
 ```
   Content-Type: application/json
 ```
+* Query :
+```
+{
+  "videoId" : String
+}
+``` 
 * Payload :
 
 ```
 {
   "linkProduct": String,
-  "titleProduct": String,
-  "priceProduct": Number,
-  "videoId" : String,
+  "title": String,
+  "price": Number,
+  "imageURL": String,
 }
 
 ```
 
-### GET /comments
+### GET /api/vi/video/{videoId}/comments
 
 Return all comments with videoId 
 
 * Code : 200
-* Headers: 
+* Query :
 ```
-  Content-Type: application/json
-```
+{
+  "videoId" : String
+}
+``` 
 * Payload :
 ```
 {
@@ -136,35 +165,47 @@ Return all comments with videoId
 
 ```
 [
-  {
-    "_id": String,
-    "commentId": String,
-    "username": String,
-    "comment": String,
-    "videoId" : String,
-    "timestamp" : Date,
-    "__v": Number
+ {
+  "_id": {
+    "$oid": String
+  },
+  "username": String,
+  "message": String,
+  "videoId": {
+    "$oid": String
+  },
+  "createdAt": {
+    "$date": Date
+  },
+  "updatedAt": {
+    "$date": Date
   }
+ }
 ]
 
 ```
 
-### POST /comments 
+### POST /api/vi/video/{videoId}/comments
 
-Create a new comment and returns the id
+Create a new comment 
 
 * Code : 201
 * Headers: 
 ```
   Content-Type: application/json
 ```
+* Query :
+```
+{
+  "videoId" : String
+}
+``` 
 * Payload :
 
 ```
 {
   "username": String,
-  "comment": String,
-  "videoId" : String,
+  "message": String,
 }
 
 ```
