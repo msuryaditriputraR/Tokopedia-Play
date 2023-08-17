@@ -12,4 +12,13 @@ For more details see each of the following folders:
 * [Back-End](./back-end/)
 * [Front-End](./front-end/)
 
+
+## FEATURES
+
+* HOME PAGE - LIST of VIDEOS
+* DETAIL PAGE - Video Youtube, List Products, and Comments
+* Sign In With Google
+* Search
+* Push Comment
+
 Feel Free to leave feedback on the issues tab, All Feedback is really appreciated 😊
