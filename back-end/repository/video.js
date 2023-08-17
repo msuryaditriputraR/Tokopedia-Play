@@ -18,8 +18,22 @@ async function addVideo(data) {
   return video;
 }
 
+async function searchVideo(query) {
+  const videos = await prisma.videos.findMany({
+    where: {
+      title: {
+        contains: query,
+        mode: 'insensitive'
+      }
+    }
+  });
+
+  return videos;
+}
+
 export default {
   getAllVideo,
   getVideo,
-  addVideo
+  addVideo,
+  searchVideo
 };

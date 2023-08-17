@@ -37,3 +37,8 @@ Content-Type: application/json
       "Elektronik"
     ]
 }
+
+###
+
+# SEARCH VIDEO
+GET http://localhost:5000/api/v1/videos/search?q=u

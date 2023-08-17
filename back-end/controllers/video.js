@@ -49,8 +49,26 @@ async function postVideo(req, res) {
   }
 }
 
+async function searchVideo(req, res) {
+  try {
+    const query = req.query.q;
+
+    if (!query) {
+      res.status(400).json({error: 'Bad Payload'});
+    }
+
+    const videos = await videoService.searchVideo(query);
+
+    if (videos.length > 0) res.status(200).json(videos);
+    else res.status(404).json({message: 'Video Not Found'});
+  } catch (error) {
+    res.status(500).json({error: error.message});
+  }
+}
+
 export default {
   getVideoList,
   postVideo,
-  getVideo
+  getVideo,
+  searchVideo
 };

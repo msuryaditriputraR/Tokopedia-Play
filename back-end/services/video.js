@@ -16,8 +16,15 @@ async function addVideo(data) {
   return video;
 }
 
+async function searchVideo(query) {
+  const videos = await videoRepository.searchVideo(query);
+
+  return videos;
+}
+
 export default {
   getVideoList,
   getVideoById,
-  addVideo
+  addVideo,
+  searchVideo
 };
