@@ -25,14 +25,14 @@
 * app.js is main app
 
 ## API STRUCTURE
-There are 3 routes in this project
-* /videos
-* /products
-* /comments
+
+* /api/v1/videos 
+* /api/vi/video/{videoId}/products
+* /api/vi/video/{videoId}/comments
 
 ## REQUEST & RESPONSE
 
-### GET /videos
+### GET /api/v1/videos
 
 Return all videos 
 
@@ -40,16 +40,7 @@ Return all videos
 * Content:
 
 ```
-[
-  {
-    "_id": String,
-    "videoId": String,
-    "urlThumbnail": String,
-    "titleVideo": String,
-    "linkVideo": String,
-    "__v": Number
-  }
-]
+
 
 ```
 
