@@ -1,5 +1,6 @@
 import { PageProvider } from "./context/PageContext";
 import { UserProvider } from "./context/UserContext";
+import { SearchProvider } from "./context/SearchContext";
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -20,7 +21,9 @@ function App() {
     <>
       <UserProvider>
         <PageProvider>
-          <RouterProvider router={router} />
+          <SearchProvider>
+            <RouterProvider router={router} />
+          </SearchProvider>
         </PageProvider>
       </UserProvider>
     </>

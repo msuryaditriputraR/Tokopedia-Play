@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { BsSearchHeart } from "react-icons/bs";
+import { SearchContext } from "../context/SearchContext";
 
 const Search = () => {
-  const [keyword, setKeyword] = useState("");
+  const { keyword, setKeyword } = useContext(SearchContext);
 
   const handleSearch = (e) => setKeyword(e.target.value);
 
