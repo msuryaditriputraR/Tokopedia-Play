@@ -11,7 +11,7 @@ section {
 }
 
 .carousel {
-  @apply overflow-x-auto py-4 items-start gap-x-3 grid grid-flow-col auto-cols-max
+  @apply grid auto-cols-max grid-flow-col items-start gap-x-3 overflow-x-auto py-4s
 }
 
 @layer utilities {
