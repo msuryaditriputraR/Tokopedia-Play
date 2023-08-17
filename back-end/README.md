@@ -210,6 +210,13 @@ Create a new comment
 
 ```
 
+## WHAT I USED
+
+* [Nodejs](https://nodejs.org/en)
+* [ExpressJS](https://expressjs.com/)
+* [MongoDb](http://www.mongodb.com/)
+* [Prisma](https://www.prisma.io/)
+
 ## HOW TO RUN
 
 ### Requirements
