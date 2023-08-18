@@ -9,7 +9,7 @@ const Profile = () => {
 
   return (
     <article
-      className="relative flex items-center gap-x-2"
+      className="relative order-1 flex items-center gap-x-2"
       onClick={() => setShowMenu(!showMenu)}
     >
       <p>{user.given_name}</p>
