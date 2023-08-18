@@ -21,4 +21,10 @@ For more details see each of the following folders:
 * Search
 * Push Comment
 
+## DEPLOYMENT
+
+* Back-End 
+  https://backend-tokopedia-play-production.up.railway.app/
+* Front-End
+
 Feel Free to leave feedback on the issues tab, All Feedback is really appreciated 😊
