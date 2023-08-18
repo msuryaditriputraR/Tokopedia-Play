@@ -40,7 +40,7 @@ const Comments = ({ videoId }) => {
   }, [isSend, videoId]);
 
   return (
-    <div className="relative max-h-[430px] overflow-hidden rounded-3xl border border-slate-200 shadow hover:shadow-md">
+    <div className="relative row-start-3 h-[430px] overflow-hidden rounded-3xl border border-slate-200 shadow hover:shadow-md xl:col-start-3 xl:row-start-1">
       <h2 className="absolute top-0 z-10 w-full border border-slate-200 bg-white px-4 py-3 font-semibold">
         Comments
       </h2>

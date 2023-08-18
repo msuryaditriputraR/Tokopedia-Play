@@ -26,7 +26,7 @@ const Detail = () => {
     video && (
       <>
         <Header />
-        <section className="mt-24 grid grid-cols-3 gap-5">
+        <section className="mt-24 grid grid-cols-1 gap-5 xl:grid-cols-3">
           <Frame
             linkVideo={video.linkVideo}
             title={video.title}
