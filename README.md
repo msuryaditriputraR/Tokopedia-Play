@@ -20,6 +20,8 @@ For more details see each of the following folders:
 * Sign In With Google
 * Search
 * Push Comment
+* Responsive Design
+* Dark Mode
 
 ## DEPLOYMENT
 
