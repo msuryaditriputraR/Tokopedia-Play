@@ -39,11 +39,12 @@ npm i
 4. Create Project in [Console Google Cloud](https://console.cloud.google.com/) and get CLient ID of your project
 
 5. rename .env.example  to .env and fill the variables with your own
-   - VITE_ROOT_API = Endpoint API Server
+   - VITE_ROOT_API = Endpoint API Server (Example: https://backend-tokopedia-play-production.up.railway.app/api/v1/)
    - VITE_GCLIENT_ID = your Client ID of Google  Cloud Console Project
    
 6. Run Project
 ```
 npm run dev
 ```
-1. Happy Coding
+
+7. Happy Coding
