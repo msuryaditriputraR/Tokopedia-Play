@@ -1,6 +1,6 @@
 const Frame = ({ title, linkVideo, youtubeId }) => {
   return (
-    <div className="relative col-span-2 h-0 pb-[125%] xl:pb-[56.25%]">
+    <div className="relative col-span-2 h-0 pb-[125%] sm:pb-[80.75%] xl:pb-[56.25%]">
       <iframe
         className="absolute left-0 top-0 h-full w-full rounded-2xl shadow-md"
         src={`${linkVideo}?controls=0&autoplay=1&loop=1&rel=0&playlist=${youtubeId}`}

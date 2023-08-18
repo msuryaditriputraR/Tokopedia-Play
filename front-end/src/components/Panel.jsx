@@ -34,14 +34,14 @@ export const Panel = () => {
               {videoSearch.message}
             </p>
           ) : (
-            <div className="grid grid-cols-1 items-start gap-6 xl:grid-cols-3">
+            <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {videoSearch?.map((v, i) => (
                 <VideoCard key={v.id} video={v} index={i} />
               ))}
             </div>
           )
         ) : (
-          <div className="grid grid-cols-1 items-start gap-6 xl:grid-cols-3">
+          <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {activeTab === "Explore"
               ? data.map((d, i) => <VideoCard key={d.id} video={d} index={i} />)
               : filteredData?.map((d, i) => (
