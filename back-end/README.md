@@ -27,8 +27,8 @@
 ## API STRUCTURE
 
 * /api/v1/videos 
-* /api/vi/video/{videoId}/products
-* /api/vi/video/{videoId}/comments
+* /api/v1/video/{videoId}/products
+* /api/v1/video/{videoId}/comments
 
 ## REQUEST & RESPONSE
 
@@ -82,7 +82,7 @@ Create a new video and returns the video
 
 ```
 
-### GET /api/vi/video/{videoId}/products
+### GET /api/v1/video/{videoId}/products
 
 Return all products with videoId
 
@@ -117,7 +117,7 @@ Return all products with videoId
 
 ```
 
-### POST /api/vi/video/{videoId}/products
+### POST /api/v1/video/{videoId}/products
 
 Create a new product and returns the product
 
@@ -144,7 +144,7 @@ Create a new product and returns the product
 
 ```
 
-### GET /api/vi/video/{videoId}/comments
+### GET /api/v1/video/{videoId}/comments
 
 Return all comments with videoId 
 
@@ -185,7 +185,7 @@ Return all comments with videoId
 
 ```
 
-### POST /api/vi/video/{videoId}/comments
+### POST /api/v1/video/{videoId}/comments
 
 Create a new comment 
 
