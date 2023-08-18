@@ -226,29 +226,38 @@ Create a new comment
 * [MongoDb](http://www.mongodb.com/) (v6.0.8 or newer)
 
 ### RUN
-1. Install all depedencies
+1. Fork & Clone this project 
+2. Open This project
+```
+cd back-end
+```
+3. Install all depedencies
 ```
 npm i
 ```
-1. Install Recommendation Extension for VS Code (REST CLIENT) <br> 
+4. Install Recommendation Extension for VS Code (REST CLIENT) <br> 
    REST CLIENT is vscode extension to send request easyly
 
-2. Create new db tokopedia-play on mongoshell (Terminal)
-```
-use tokopedia-play
-```   
+5. Create Database on [MongoDB Atlas](https://www.mongodb.com/atlas/database)
+   (Ensure your current IP is allowed to access your MongoDB)
+  
+6. rename .env.example to .env and fill the variables with your own
+   (Copy your MongoDB connection string to DATABASE_URL variable)
 
-1. Import sample collections on folder [collections](./collections/) to tokopedia-play db
+7. Import sample collections on folder [collections](./collections/) to tokopedia-play db
    
-2. rename .env.example  to .env and fill the variables with your own
+8. Run Prisma push & Generate
+```
+npm run prisma:push && npm run prisma:generate
+```
 
-3. Run the Server
+9. Run the Server
 ```
 npm start
 ```
 
-4. Open file on folder [rest](./rest/) and start send request
+10. Open file on folder [rest](./rest/) and start send request
    
 ![Sample Request](./images/sample-request.png)
 
-5. Happy Coding
+11. Happy Coding
