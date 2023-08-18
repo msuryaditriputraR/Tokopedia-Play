@@ -13,7 +13,7 @@ const Header = () => {
   const { user, setUser } = useContext(UserContext);
 
   return (
-    <header className="section fixed left-0 top-0 z-50 flex h-32 w-full flex-wrap items-center justify-between rounded-b-2xl bg-green-200 bg-opacity-5 bg-clip-padding shadow backdrop-blur-xl backdrop-filter xl:h-16 xl:flex-nowrap">
+    <header className="section fixed left-0 top-0 z-50 flex h-28 w-full flex-wrap items-center justify-between rounded-b-2xl bg-green-200 bg-opacity-5 bg-clip-padding shadow backdrop-blur-xl backdrop-filter xl:h-16 xl:flex-nowrap">
       <div className="order-1 flex items-center gap-x-4">
         <img src="/logo.png" alt="logo" className="w-[150px] drop-shadow-md" />
         {isDetailPage && (
