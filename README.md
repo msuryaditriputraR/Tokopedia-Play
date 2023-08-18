@@ -26,5 +26,6 @@ For more details see each of the following folders:
 * Back-End 
   https://backend-tokopedia-play-production.up.railway.app/
 * Front-End
+  https://msuryaditriputrar.github.io/frontend-tokopedia-play
 
 Feel Free to leave feedback on the issues tab, All Feedback is really appreciated 😊
