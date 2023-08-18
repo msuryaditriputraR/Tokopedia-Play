@@ -9,7 +9,7 @@ const Search = () => {
 
   return (
     <div
-      className={`group order-2 flex w-full items-center gap-x-2 rounded-md border px-4 py-2 shadow-sm transition hover:border-2 hover:border-green-500 xl:order-1 xl:w-1/2 ${
+      className={`group order-2 flex w-full items-center gap-x-2 rounded-md border px-4 py-2 shadow-sm transition hover:border-2 hover:border-green-500 lg:order-1 lg:w-1/2 ${
         keyword && "border-2 border-green-500"
       }`}
     >

@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header
-      className={`section fixed left-0 top-0 z-50 flex w-full flex-wrap items-center justify-between rounded-b-2xl bg-green-200 bg-opacity-5 bg-clip-padding shadow backdrop-blur-xl backdrop-filter xl:h-16 xl:flex-nowrap ${
+      className={`section fixed left-0 top-0 z-50 flex w-full flex-wrap items-center justify-between rounded-b-2xl bg-green-200 bg-opacity-5 bg-clip-padding shadow backdrop-blur-xl backdrop-filter lg:h-16 lg:flex-nowrap ${
         !isDetailPage ? "h-28" : "h-16"
       }`}
     >
