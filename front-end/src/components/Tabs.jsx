@@ -7,8 +7,8 @@ const Tabs = () => {
   const { activeTab, setActiveTab } = useContext(TabsContext);
 
   return (
-    <section className="mt-20">
-      <ul className="flex gap-x-2">
+    <section className="mt-28 xl:mt-20">
+      <ul className="carousel no-scrollbar gap-x-2">
         {tabsMenu.map((menu, index) => (
           <li
             key={index}
