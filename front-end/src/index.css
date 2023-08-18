@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 body {
-  @apply font-poppins
+  @apply font-poppins;
 }
 
-section {
-  @apply px-14
+section,
+.section {
+  @apply px-4 xl:px-14;
 }
 
 .carousel {
-  @apply grid auto-cols-max grid-flow-col items-start gap-x-3 overflow-x-auto py-4
+  @apply grid auto-cols-max grid-flow-col items-start gap-x-3 overflow-x-auto py-4;
 }
 
 @layer utilities {
-
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
