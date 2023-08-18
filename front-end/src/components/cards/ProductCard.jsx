@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
   });
   const { title, price, imageURL, linkProduct } = product;
   return (
-    <article className="w-[135px] rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition-all hover:scale-105 hover:shadow-lg lg:w-[165px]">
+    <article className="w-[135px] rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition-all  hover:scale-105 hover:shadow-lg dark:bg-[#262c29] lg:w-[165px]">
       <a href={linkProduct} target="_blank" rel="noopener noreferrer">
         <div className="relative mb-4 overflow-hidden">
           <img

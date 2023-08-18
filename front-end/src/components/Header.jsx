@@ -7,6 +7,7 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
 import Profile from "./Profile";
 import { UserContext } from "../context/UserContext";
+import ToggleTheme from "./ToggleTheme";
 
 const Header = () => {
   const { isDetailPage } = useContext(PageContext);
@@ -30,25 +31,28 @@ const Header = () => {
       </div>
       {!isDetailPage && <Search />}
 
-      <GoogleOAuthProvider clientId={import.meta.env.VITE_GCLIENT_ID}>
-        {Object.keys(user).length > 0 ? (
-          <Profile />
-        ) : (
-          <div className="order-1">
-            <GoogleLogin
-              onSuccess={(credentialResponse) => {
-                const u = jwt_decode(credentialResponse.credential);
-                setUser(u);
-                localStorage.setItem("user", JSON.stringify(u));
-              }}
-              onError={() => {
-                console.log("Login Failed");
-              }}
-              useOneTap
-            />
-          </div>
-        )}
-      </GoogleOAuthProvider>
+      <div className="order-1 flex items-center gap-x-4">
+        <GoogleOAuthProvider clientId={import.meta.env.VITE_GCLIENT_ID}>
+          {Object.keys(user).length > 0 ? (
+            <Profile />
+          ) : (
+            <div className="order-1">
+              <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  const u = jwt_decode(credentialResponse.credential);
+                  setUser(u);
+                  localStorage.setItem("user", JSON.stringify(u));
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+                useOneTap
+              />
+            </div>
+          )}
+        </GoogleOAuthProvider>
+        <ToggleTheme />
+      </div>
     </header>
   );
 };

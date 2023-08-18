@@ -9,7 +9,7 @@ const VideoCard = ({ video, index }) => {
   const { name, title, thumbnailURL, id, views } = video;
 
   return (
-    <article className="group rounded-xl border border-slate-200 bg-white p-3 shadow-sm hover:shadow-md">
+    <article className="group rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition-colors hover:shadow-md dark:bg-[#262c29]">
       <Link to={`/video/${id}`}>
         <div className="relative mb-4 overflow-hidden">
           <img

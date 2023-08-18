@@ -41,7 +41,7 @@ const Comments = ({ videoId }) => {
 
   return (
     <div className="relative row-start-3 h-[430px] overflow-hidden rounded-3xl border border-slate-200 shadow hover:shadow-md lg:col-start-3 lg:row-start-1 lg:h-[415px] xl:h-[430px]">
-      <h2 className="absolute top-0 z-10 w-full border border-slate-200 bg-white px-4 py-3 font-semibold">
+      <h2 className="absolute top-0 z-10 w-full border border-slate-200 bg-white px-4 py-3 font-semibold transition-colors dark:bg-[#262c29]">
         Comments
       </h2>
       <div className="no-scrollbar flex max-h-[80%] flex-col gap-y-2 overflow-y-auto">
@@ -55,7 +55,7 @@ const Comments = ({ videoId }) => {
         </p>
       )}
       <form
-        className="absolute bottom-4 left-[50%] z-10 flex w-11/12 translate-x-[-50%] items-center gap-x-3 rounded-full border border-slate-200 bg-white px-4 py-2 shadow"
+        className="absolute bottom-4 left-[50%] z-10 flex w-11/12 translate-x-[-50%] items-center gap-x-3 rounded-full border border-slate-200 bg-white px-4 py-2 shadow transition-colors dark:bg-[#262c29]"
         onSubmit={handleSend}
       >
         <input

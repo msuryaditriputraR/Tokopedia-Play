@@ -12,10 +12,10 @@ const Tabs = () => {
         {tabsMenu.map((menu, index) => (
           <li
             key={index}
-            className={`cursor-pointer  rounded-full border border-slate-300 px-4 py-2 capitalize shadow-sm transition hover:bg-green-500  hover:text-white hover:shadow-md ${
+            className={`cursor-pointer rounded-full border border-slate-300 px-4 py-2 capitalize shadow-sm transition hover:bg-green-500  hover:text-white hover:shadow-md ${
               activeTab === menu
                 ? "bg-green-500 text-white"
-                : "bg-white text-current"
+                : "bg-white text-current dark:bg-[#262c29]"
             }`}
             onClick={() => {
               localStorage.setItem("activeTab", menu);

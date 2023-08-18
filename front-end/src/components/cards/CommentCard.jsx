@@ -11,7 +11,7 @@ const CommentCard = ({ comment }) => {
   }, []);
 
   return (
-    <article className="comment-card mx-auto w-11/12 rounded-lg border border-slate-200 bg-white p-2 shadow-sm first:mt-14 ">
+    <article className="comment-card mx-auto w-11/12 rounded-lg border border-slate-200 bg-white p-2 shadow-sm transition-colors first:mt-14 dark:bg-[#262c29]">
       <div className="mb-1 flex items-center justify-between">
         <h2 className="flex-1 truncate font-semibold">{username}</h2>
         <span className="text-xs text-slate-400">

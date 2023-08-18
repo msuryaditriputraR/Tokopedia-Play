@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-poppins;
+  @apply font-poppins transition-colors dark:bg-[#1c211f] dark:text-[#bdc2bf];
 }
 
 section,
