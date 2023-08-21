@@ -18,9 +18,9 @@ const ToggleTheme = () => {
       }}
     >
       {darkSide ? (
-        <FiSun size={"1.45rem"} title="Toggle Theme" />
+        <FiSun size={"1.35rem"} title="Toggle Theme" />
       ) : (
-        <FiMoon size={"1.45rem"} title="Toggle Theme" />
+        <FiMoon size={"1.35rem"} title="Toggle Theme" />
       )}
     </div>
   );

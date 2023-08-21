@@ -18,7 +18,7 @@ const MenuProfile = () => {
   ];
 
   return (
-    <div className="absolute bottom-[-250%] right-0 z-30 w-28 rounded-md border border-slate-300 bg-white px-2 shadow-lg">
+    <div className="absolute bottom-[-335%] right-0 z-30 w-28 rounded-md border border-slate-300 bg-white px-2 shadow-lg sm:bottom-[-250%]">
       <ul>
         {menus.map((menu, index) => (
           <li

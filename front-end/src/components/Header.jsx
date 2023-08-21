@@ -19,19 +19,23 @@ const Header = () => {
         !isDetailPage ? "h-28" : "h-16"
       }`}
     >
-      <div className="order-1 flex items-center gap-x-4">
-        <img src="/logo.png" alt="logo" className="w-[150px] drop-shadow-md" />
+      <div className="order-1 flex items-center gap-x-2 sm:gap-x-4">
+        <img
+          src="/logo.png"
+          alt="logo"
+          className="w-[100px] drop-shadow-md sm:w-[150px]"
+        />
         {isDetailPage && (
           <Link to={"/"}>
-            <span className="inline-flex h-[35px] w-[35px] items-center justify-center rounded-full bg-green-500 shadow-md">
-              <BsArrowLeft color="white" className="text-xl" />
+            <span className="inline-flex h-[25px] w-[25px] items-center justify-center rounded-full bg-green-500 shadow-md sm:h-[35px] sm:w-[35px]">
+              <BsArrowLeft color="white" className="text-base sm:text-xl" />
             </span>
           </Link>
         )}
       </div>
       {!isDetailPage && <Search />}
 
-      <div className="order-1 flex items-center gap-x-4">
+      <div className="order-1 flex items-center gap-x-2 sm:gap-x-4">
         <GoogleOAuthProvider clientId={import.meta.env.VITE_GCLIENT_ID}>
           {Object.keys(user).length > 0 ? (
             <Profile />
@@ -47,6 +51,10 @@ const Header = () => {
                   console.log("Login Failed");
                 }}
                 useOneTap
+                context="signin"
+                shape="circle"
+                text="signin"
+                width="100"
               />
             </div>
           )}

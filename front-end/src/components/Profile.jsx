@@ -12,12 +12,11 @@ const Profile = () => {
       className="relative order-1 flex items-center gap-x-2"
       onClick={() => setShowMenu(!showMenu)}
     >
-      <p>{user.given_name}</p>
+      <p className="text-sm sm:text-base">{user.given_name}</p>
       <img
         src={user.picture}
         alt={user.name}
-        width={45}
-        className="rounded-full shadow-md"
+        className="w-[35px] rounded-full shadow-md sm:w-[45px]"
       />
 
       {showMenu && <MenuProfile />}
