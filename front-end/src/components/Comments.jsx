@@ -37,7 +37,9 @@ const Comments = ({ videoId }) => {
     }
   };
 
-  const { data } = useSWR("comments", () => getListComments(videoId));
+  const { data } = useSWR("comments", () => getListComments(videoId), {
+    refreshInterval: 1000,
+  });
 
   return (
     <div className="relative row-start-3 h-[430px] overflow-hidden rounded-3xl border border-slate-200 shadow hover:shadow-md lg:col-start-3 lg:row-start-1 lg:h-[415px] xl:h-[430px]">
