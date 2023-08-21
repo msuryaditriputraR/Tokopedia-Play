@@ -1,24 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
+import useTheme from "../hooks/useTheme";
 
 const ToggleTheme = () => {
-  const [isDark, setIsDark] = useState(localStorage.getItem("isDark") || false);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList[isDark ? "add" : "remove"]("dark");
-  }, [isDark]);
+  const [colorTheme, setTheme] = useTheme();
+  const [darkSide, setDarkSide] = useState(
+    colorTheme === "light" ? true : false,
+  );
 
   return (
     <div
       className="order-1 cursor-pointer"
       aria-label="toggle theme"
       onClick={() => {
-        setIsDark(!isDark);
-        localStorage.setItem("isDark", isDark);
+        setTheme(colorTheme);
+        setDarkSide(!darkSide);
       }}
     >
-      {isDark ? (
+      {darkSide ? (
         <FiSun size={"1.45rem"} title="Toggle Theme" />
       ) : (
         <FiMoon size={"1.45rem"} title="Toggle Theme" />
