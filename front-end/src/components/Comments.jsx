@@ -1,8 +1,10 @@
+import { useContext, useState } from "react";
+import useSWR, { useSWRConfig } from "swr";
 import { IoSendSharp } from "react-icons/io5";
+import { UserContext } from "../context/UserContext";
+
 import Button from "./Button";
 import CommentCard from "./cards/CommentCard";
-import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../context/UserContext";
 import postComment from "../api/postComment";
 import getListComments from "../api/getListComments";
 
@@ -10,8 +12,7 @@ const Comments = ({ videoId }) => {
   const { user } = useContext(UserContext);
   const [error, setError] = useState("");
   const [valueInp, setValueInp] = useState("");
-  const [isSend, setIsSend] = useState(false);
-  const [listComments, setListComemnts] = useState([]);
+  const { mutate } = useSWRConfig();
 
   const handleSend = (e) => {
     e.preventDefault();
@@ -28,16 +29,15 @@ const Comments = ({ videoId }) => {
           message: valueInp,
         };
 
-        postComment(videoId, data).then(() => setIsSend(!isSend));
+        postComment(videoId, data).then(() => {
+          mutate("comments");
+          setValueInp("");
+        });
       }
     }
   };
 
-  useEffect(() => {
-    getListComments(videoId)
-      .then((res) => res.json())
-      .then((data) => setListComemnts(data));
-  }, [isSend, videoId]);
+  const { data } = useSWR("comments", () => getListComments(videoId));
 
   return (
     <div className="relative row-start-3 h-[430px] overflow-hidden rounded-3xl border border-slate-200 shadow hover:shadow-md lg:col-start-3 lg:row-start-1 lg:h-[415px] xl:h-[430px]">
@@ -45,7 +45,7 @@ const Comments = ({ videoId }) => {
         Comments
       </h2>
       <div className="no-scrollbar flex max-h-[80%] flex-col gap-y-2 overflow-y-auto">
-        {listComments.map((d) => (
+        {data?.map((d) => (
           <CommentCard key={d.id} comment={d} />
         ))}
       </div>
