@@ -5,16 +5,19 @@ import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/video/:videoId",
-    element: <Detail />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/video/:videoId",
+      element: <Detail />,
+    },
+  ],
+  { basename: "/frontend-tokopedia-play" },
+);
 
 function App() {
   return (
