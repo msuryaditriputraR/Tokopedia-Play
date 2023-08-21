@@ -19,7 +19,7 @@ For more details see each of the following folders:
 * DETAIL PAGE - Video Youtube, List Products, and Comments
 * Sign In With Google
 * Search
-* Push Comment
+* Push Comment (REALTIME using SWR)
 * Count Views
 * Responsive Design
 * Dark Mode
