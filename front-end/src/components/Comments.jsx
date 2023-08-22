@@ -65,7 +65,10 @@ const Comments = ({ videoId }) => {
           className="flex-1 bg-transparent py-1 text-sm caret-green-500 outline-none"
           placeholder="Give your Positive Comment"
           value={valueInp}
-          onInput={(e) => setValueInp(e.target.value)}
+          onInput={(e) => {
+            setError("");
+            setValueInp(e.target.value);
+          }}
         />
         <Button cls="rounded-full p-2">
           <IoSendSharp />
