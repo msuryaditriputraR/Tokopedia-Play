@@ -7,6 +7,7 @@ import Button from "./Button";
 import CommentCard from "./cards/CommentCard";
 import postComment from "../api/postComment";
 import getListComments from "../api/getListComments";
+import showNotification from "../utils/showNotification";
 
 const Comments = ({ videoId }) => {
   const { user } = useContext(UserContext);
@@ -29,10 +30,13 @@ const Comments = ({ videoId }) => {
           message: valueInp,
         };
 
-        postComment(videoId, data).then(() => {
-          mutate("comments");
-          setValueInp("");
-        });
+        postComment(videoId, data)
+          .then((res) => res.json())
+          .then(({ message }) => {
+            showNotification(message);
+            mutate("comments");
+            setValueInp("");
+          });
       }
     }
   };
