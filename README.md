@@ -20,6 +20,7 @@ For more details see each of the following folders:
 * Sign In With Google
 * Search
 * Push Comment (REALTIME using SWR)
+* Notification
 * Count Views
 * Responsive Design
 * Dark Mode
